@@ -66,14 +66,14 @@ restaurant_read_stream_df = spark.readStream \
 
 # определяем схему входного сообщения для json
 incomming_message_schema = StructType([
-        StructField("restaurant_id", StringType()),
-        StructField("adv_campaign_id", StringType()),
-        StructField("adv_campaign_content", StringType()),
-        StructField("adv_campaign_owner", StringType()),
-        StructField("adv_campaign_owner_contact", StringType()),
-        StructField("adv_campaign_datetime_start", LongType()),
+        StructField("restaurant_id", StringType(), True),
+        StructField("adv_campaign_id", StringType(), True),
+        StructField("adv_campaign_content", StringType(), True),
+        StructField("adv_campaign_owner", StringType(), True),
+        StructField("adv_campaign_owner_contact", StringType(), True),
+        StructField("adv_campaign_datetime_start", LongType(), True),
         StructField("adv_campaign_datetime_end", LongType(), True),
-        StructField("datetime_created", LongType()),
+        StructField("datetime_created", LongType(), True),
     ])
 
 # определяем текущее время в UTC в миллисекундах, затем округляем до секунд
