@@ -72,7 +72,7 @@ incomming_message_schema = StructType([
         StructField("adv_campaign_owner", StringType()),
         StructField("adv_campaign_owner_contact", StringType()),
         StructField("adv_campaign_datetime_start", LongType()),
-        StructField("adv_campaign_datetime_end", LongType()),
+        StructField("adv_campaign_datetime_end", LongType(), True),
         StructField("datetime_created", LongType()),
     ])
 
